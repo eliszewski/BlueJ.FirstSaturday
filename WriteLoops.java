@@ -1,4 +1,4 @@
-import com.sun.org.apache.xpath.internal.SourceTree;
+
 
 import java.awt.SystemTray;
 import java.util.concurrent.ThreadLocalRandom;
@@ -50,7 +50,7 @@ public class WriteLoops {
 
     public int startAtTwentyOne() { //w = 11
         int w = 0;
-        for(int i = 21; i > 11; i--){
+        for(int i = 21; i >= 11; i--){
             w = w + 1;
         }
         // Write a FOR loop that makes 10 iterations, start at 21.
@@ -79,7 +79,7 @@ public class WriteLoops {
 
         { // w = 17
             int w = 0;
-        for(int i = 0; i < 32; i+=2){
+        for(int i = 0; i <=32; i+=2){
             w = w + 1;
         }
 
@@ -128,7 +128,7 @@ public class WriteLoops {
             if(i>51){
                 System.out.println("Hello Zipcode");
             }else{
-
+                    w= w +1;
             }
         }
 
@@ -188,7 +188,7 @@ public class WriteLoops {
     // is less than “highestScore” and if it is, adds “currentScore” to
     // "runningScore"
     // and then sets “currentScore” to “gameNextScore()”
-    public int checkGameScore() {
+    public boolean checkGameScore() {
         int w = 0;
         int highestScore = 236;
         int currentScore = gameNextScore();
@@ -205,7 +205,7 @@ public class WriteLoops {
 
             // each time through the inner loop
         
-        return w; // >= 3;
+        return w>= 3;
     }
 
     // Rewrite the previous WHILE loop as a DO..WHILE loop.
@@ -237,10 +237,18 @@ public class WriteLoops {
         int w = 0;
         String adminPhoneNumber = "+1 202 456 1111";
 
+
         
 
         // calling
-        w = w + 1;
+        while(serverIsRunning()){
+            waitFor(5);
+            w = w + 1;
+        }
+        if(!serverIsRunning()){
+            sendEmergencyText("Help!", adminPhoneNumber);
+        }
+
         // each time through the inner loop
         
         return w;
@@ -251,10 +259,15 @@ public class WriteLoops {
     // and if it is, add 7 to “i”
     public int loop50by7() {
         int w = 0;
+        int i = 7;
+        while(i < 50){
+            i +=7;
+            w = w + 1;
+        }
 
 
             // calling
-            w = w + 1;
+
             // each time through the inner loop
         
         return w;
@@ -289,9 +302,14 @@ public class WriteLoops {
         int w = 0;
         int sumOfThrees = 0;
 
+        while(w < threes_array.length){
+            sumOfThrees = sumOfThrees + threes_array[w];
+            w = w + 1;
+        }
+
  
             // calling
-            w = w + 1;
+
             // each time through the inner loop
         
         System.out.print("The Sum is ");

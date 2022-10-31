@@ -11,7 +11,7 @@ public class WriteIFs
     public void playerDied(boolean player1) {
         // Write an IF statement that checks “player1.isAlive()” 
         // and if that’s false, calls “displayGameOver(player1)”
-        if(!player1.isAlive()){
+        if(!isAlive(player1)){
             displayGameOver(player1);
         }
      
@@ -23,6 +23,8 @@ public class WriteIFs
         // calls “heatOn()” else calls “coolOn()”
         if(tempurature(room) < 70){
             heatOn();
+        }else {
+            coolOn();
         }
 
         
@@ -49,13 +51,13 @@ public class WriteIFs
     }
 
 
-    
+
     /**
      *  Pay no attention to the code below this point.
      * 
      * 
      * instance variables
-     * / 
+     */
    int x;
    int tt_t;
    int tt_s;
