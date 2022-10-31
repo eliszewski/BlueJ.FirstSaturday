@@ -218,9 +218,10 @@ public class WriteLoops {
 
         // do your while loop here
         do {
-
+            runningScore += currentScore;
+            currentScore = gameNextScore();
             w = w + 1;
-        }while()
+        }while(runningScore < highestScore);
             // calling
 
             // each time through the inner loop
@@ -235,6 +236,7 @@ public class WriteLoops {
     public int checkServerStatus() {
         int w = 0;
         String adminPhoneNumber = "+1 202 456 1111";
+
         
 
         // calling
